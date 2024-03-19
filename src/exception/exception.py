@@ -6,7 +6,7 @@ class customexception(Exception):
     def __init__(self,error_message,error_details:sys):
         self.error_message=error_message
         _,_,exc_tb=error_details.exc_info()
-        print(exc_tb)
+        print("This is exc_tb :",exc_tb)
 
         self.lineno=exc_tb.tb_lineno
         self.file_name=exc_tb.tb_frame.f_code.co_filename
@@ -18,7 +18,9 @@ class customexception(Exception):
 
 if __name__=="__main__":
     try:
-        a=1/0
+        # a = 100/0
+        a=100/10
+        print(a)
 
     except Exception as e:
         #print(e)
