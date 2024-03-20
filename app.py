@@ -38,4 +38,6 @@ def predict_datapoint():
 
 
 if __name__=="__main__":
+    print("Flask app running at: http://0.0.0.0:8000/")
+    print("Or, Flask app running at: localhost:8000/")
     app.run(host="0.0.0.0",port=8000)
